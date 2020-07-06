@@ -96,7 +96,7 @@ div[class^="typeWindows-"] div[class^="wordmark"]::before {
 	top: -228px;										/*┘*/
 }																/* 커스텀 디스코드 아이콘 */
 div[class^="typeWindows-"] div[class^="wordmark"]::after {
-	content: "DISCORD ☆";							/*┐*/
+	content: "DISCORD";							/*┐*/
 	font-family: 'Roboto Condensed', sans-serif;	/*│*/
 	font-size: 20px;								/*│*/
 	color: #fff;									/*│*/
