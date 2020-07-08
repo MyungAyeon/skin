@@ -1,7 +1,4 @@
 //META{"name":"SKIN","description":"Discord CSS Skin","author":"명아연#1004","version":"1.2"}*//
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:500&display=swap&subset=korean');
-
 
 
 :root {
@@ -257,7 +254,7 @@ div[class^="listItemWrapper-"] div[class^="childWrapper-"]:after {
 
 
 /* 읽지않은 알림 */
-div[class^="numberBadge-"], .bd-unread .item-2hkk8m, .unread-3zKkbm {
+div[class^="numberBadge-"], .pill-1m5BUr .item-2hkk8m, .unread-3zKkbm {
 	animation: New 1.8s infinite;
 }
 .unread-1xRYoj {
