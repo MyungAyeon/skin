@@ -550,6 +550,9 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 	margin-bottom: 12px;
 	border-radius: 8px;
 }
+.jumpToPresentBar-G1R9s6:active {
+	margin-bottom: 12px;
+}
 /* 최근으로 이동하기 텍스트 */
 .jumpToPresentBar-G1R9s6 .barButtonAlt-mYL1lj {
 	animation: Text-Shadow 1.8s infinite;
