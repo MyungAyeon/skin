@@ -1,0 +1,1174 @@
+//META{"name":"Seo_ri","description":"Discord White Theme 🤍","author":"명아연#1004","version":"0.1"}*//
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+
+/* 설정값 */
+:root {
+	--select: rgba(0, 0, 0, .5);
+	--server-icon-size: 36px;
+	--server-icon-spacing: 7px;
+	--server-container-padding: 12px;
+	--icon: var(--server-icon-size, var(--ASW_size, 35px));
+	--container: calc(var(--icon) + calc(var(--server-container-padding) * 2));
+	--background-floating: rgba(0, 0, 0, .5);
+	--chat-text: rgba(0, 0, 0, .8);
+	--interactive-active: rgba(25, 25, 25, .7);
+	--interactive-normal: rgba(25, 25, 25, .7);
+	--header-secondary: rgba(25, 25, 25, .8);
+	--header-primary: rgba(25, 25, 25, .7);
+	--channels-default: rgba(25, 25, 25, .8);
+}
+/* https://betterdiscordlibrary.com/themes/Adjustable%20Server%20Width - 서버아이콘 크기 조절 */
+
+
+/* 투명 */
+.appMount-3lHmkl, .app-2rEoOp, .wrapper-1Rf91z, .scroller-2TZvBN, .container-PNkimc, .panels-j1Uci_, .members-1998pB, .members-1998pB>div, .privateChannels-1nO12o, .scroller-1JbKMe, .theme-dark .container-1D34oG, .layer-3QrUeG, .standardSidebarView-3F1I7i, .contentRegionScroller-26nc1e, .channelTextArea-rNsIhG, .scrollableContainer-2NUZem, .root-SR8cQa, .scroller-1IIF0A, .header-39GIC8, .applicationStore-1pNvnv, .scroller-9moviB, .scroller-2XE8rp, .theme-dark .pageWrapper-1PgVDX, .scroller-305q3I {
+	background-color: transparent;
+}
+/* 투명 */
+.sidebar-2K8pFh, .chat-3bRxxu, .container-1r6BKw.themed-ANHk51, .nowPlayingColumn-2sl4cE, .sidebarRegionScroller-3MXcoP, .contentRegion-3nDuYy {
+	background: transparent;
+}
+
+#app-mount {
+	flex-direction: column;
+}
+
+.bg-h5JY_x {
+	background-image: url(https://media.discordapp.net/attachments/456869498423738368/762651557849202718/3e46be055baef5f9.jpg);
+	background-size: cover;
+	background-position: center;
+	filter: brightness(100%) saturate(100%) blur(0px);
+	z-index:-999;
+	position: fixed;
+}
+
+/* 채팅 폰트 색상 */
+.markup-2BOw-j {
+	color: var(--chat-text);
+}
+
+/* 스트리머 모드 */
+.colorStreamerMode-2SJAUN {
+	background-color: transparent;
+}
+
+div[class^="typeWindows-"] div[class^="wordmark"] svg {
+	display: none;
+}
+div[class^="typeWindows-"] {
+	height: 28px;
+	margin-top: 0;
+	padding-bottom: 1px;
+	z-index: 999;
+}
+div[class^="typeWindows-"] div[class^="wordmark"]::after {
+	content: "DISCORD";
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 24px;
+	color: rgba(25, 25, 25, .8);
+	position: absolute;
+	display: block;
+	left: 10px;
+	top: 6px;
+}
+div[class*="titleBar-"] div[class*="winButton-"] {
+	width: 40px;
+	height: 25px;
+	opacity: 1;
+	top: 4px;
+	margin-right: 4px;
+}
+div[class*="titleBar-"] div[class*="winButtonClose-"]:hover {
+	background-color: rgba(255, 0, 0, .75);
+}
+div[class*="titleBar-"] div[class*="winButtonMinMax-"]:hover {
+	background-color: rgba(0, 0, 0, .3);
+}
+div[class^="winButtonClose-"] svg {
+	display: none;
+}
+div[class^="winButtonMinMax-"] svg {
+	display: none;
+}
+.da-winButtonClose:after {
+	content: 'ㅁ';
+	font-size: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #000;
+}
+.da-winButton:nth-of-type(3):after {
+	content: 'ㅁ';
+	font-size: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #000;
+}
+.da-winButton:nth-of-type(4):after {
+	content: "ㅁ";
+	font-size: 30px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #000;
+}
+
+.wrapper-1BJsBx.selected-bZ3Lue .childWrapper-anI2G9 {
+	background: transparent;
+	color: #000;
+}
+.childWrapper-anI2G9 {
+	background-color: transparent;
+	color: #000;
+}
+
+/* 디스코드 홈 버튼 */
+div[class^="listItemWrapper-"] div[class^="childWrapper-"]:after {
+	content: url('https://i.imgur.com/1YOyCKI.png');
+	transform: scale(.3);
+}
+.guildSeparator-3s64Iy {
+	background-color: rgba(0, 0, 0, .5);
+}
+/* 서버 추가 아이콘 */
+.circleIconButton-jET_ig {
+	background-color: transparent;
+	color: rgba(0, 0, 0, .8);
+}
+/* 서버 추가 아이콘 */
+.circleIconButton-jET_ig.selected-ugP_am {
+	background-color: rgba(0, 0, 0, .6);
+	color: rgba(255, 255, 255, .8);
+}
+/* 언급 알림 */
+.unreadMentionsIndicatorTop-gA6RCh, .unreadMentionsIndicatorBottom-BXS58x {
+	width: 60px;
+	height: 35px;
+}
+/* 서버 배너 이미지 */
+.bannerImage-1jOskm {
+	border-radius: 5px;
+	filter: blur(.4px) brightness(93%);
+}
+/* 서버 배너 이미지 */
+.animatedContainer-1pJv5C {
+	background-color: transparent;
+	box-shadow: none;
+}
+/* 안 읽은 채널 */
+.modeUnread-1zpFdA .name-3_Dsmg {
+	animation: Text-Shadow 1.8s infinite;
+	color: #000;
+}
+/* 안 읽은 채널 아이콘 */
+.modeUnread-1zpFdA .icon-1_QxNX {
+	animation: Shadow 1.8s infinite;
+	color: #000;
+}
+/* 음성 인원수 */
+.wrapper-pZmgj4 {
+	color: #000;
+}
+/* 음성 접속중인 인원수 */
+.users-i_3-kL {
+	background-color: rgba(0, 0, 0, .35);
+}
+/* 음성 접속 가능 인원수 */
+.total-3tKGEB {
+	background-color: rgba(158, 31, 43, .8);
+}
+/* 음성 접속 가능 인원수 */
+.total-3tKGEB:after {
+	border-right-color: rgba(158, 31, 43, .6);
+}
+/* 라이브 */
+.live-vBWnV6 {
+	animation: Unread 1.8s infinite;
+}
+/* 동영상, 화면 공유 버튼 */
+.container-1giJp5 .button-1YfofB.buttonColor-7qQbGO, .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp {
+	background-color: transparent;
+	color: rgba(25, 25, 25, .85);
+}
+.container-1giJp5 .button-1YfofB.buttonColor-7qQbGO:hover, .button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp:hover {
+	background-color: rgba(25, 25, 25, .8);
+	color: #FFF;
+}
+/* 활성화된 버튼 마우스 반응 */
+.button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp:hover {
+	background-color: rgba(226, 34, 34, .8);
+	color: #FFF;
+}
+/* 활성화된 버튼 텍스트 */
+.button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp {
+	animation: Text-Shadow 1.8s infinite;
+}
+/* 활성화된 버튼 아이콘 */
+.button-1YfofB.buttonColor-7qQbGO.buttonActive-3FrkXp .buttonIcon-Od8mYw {
+	animation: Shadow 1.8s infinite;
+}
+/* 사용자 패널 */
+.activityPanel-28dQGo, .container-1giJp5 {
+	border-bottom: 2px #000;
+	border-style: dotted;
+}
+.title-eS5yk3 {
+	color: rgba(25, 25, 25, .8);
+}
+/* 알림 */
+div[class^="numberBadge-"], .unread-3zKkbm {
+	animation: Unread 1.8s infinite;
+}
+/* 서버 아이콘 왼쪽 */
+.item-2hkk8m {
+	display: none;
+}
+/* 서버 아이콘 왼쪽 알림 */
+.bd-unread .pill-31IEus {
+	border: 0px hidden rgba(25, 25, 25, .5);
+	border-radius: 8px;
+	animation: Unread2 2s infinite;
+	height: 25px;
+	width: 0px;
+}
+.form-2fGMdU:before {
+	display: none;
+}
+.children-19S4PO:after {
+	display: none;
+}
+/* 초대 */
+.theme-dark .invite-18yqGF {
+	background: rgba(0, 0, 0, .5);
+	border: 2px solid;
+	border-radius: 15px;
+	animation: Border_Color 2s infinite;
+}
+/* 채널 스크롤바 색상 */
+.scroller-2wx7Hm::-webkit-scrollbar-thumb {
+	background: rgba(25, 25, 25, .7);
+}
+/* 채널 스크롤바 넓이 */
+.scroller-2wx7Hm::-webkit-scrollbar {
+	width: 3px;
+}
+/* 멘션 */
+.wrapper-3WhCwL {
+	animation: Color 1.5s infinite;
+}
+/* 채팅창 타임스탬프 */
+.content-1o0f9g {
+	color: rgba(255, 255, 255, .85);
+	background: rgba(25, 25, 25, .6);
+}
+/* 채팅창 타임스탬프 선 */
+.divider-JfaTT5 {
+	border-top: 1px solid rgba(25, 25, 25, .6)
+}
+/* 채팅 입력칸 */
+.scrollableContainer-2NUZem {
+	border: 1px solid #000;
+	border-radius: 12px;
+}
+/* 화면 공유 선택창 */
+.theme-dark .root-1gCeng {
+	background-color: rgba(0, 0, 0, .2);
+}
+/* 화면 공유 선택창 아래 */
+.theme-dark .footer-2gL1pp {
+	background-color: rgba(0, 0, 0, .2)
+}
+/* 화면 공유 선택버튼 비활성화 */
+.lookFilled-1Gx00P.colorBrand-3pXr91:disabled {
+	background-color: rgba(158, 31, 43, .85)
+}
+/* 화면 공유 선택버튼 비활성화 마우스 반응 */
+.lookFilled-1Gx00P.colorBrand-3pXr91:disabled:hover {
+	background-color: rgba(158, 31, 43, .85)
+}
+/* 화면 공유 선택버튼 */
+.lookFilled-1Gx00P.colorBrand-3pXr91 {
+	background-color: rgba(116, 218, 114, .85)
+}
+/* 화면 공유 선택버튼 마우스 반응 */
+.lookFilled-1Gx00P.colorBrand-3pXr91:hover {
+	background-color: rgba(116, 218, 114, .85)
+}
+/* 화면 공유 방송할 채널, 게임 */
+.card-2Mz_4z {
+	background-color: transparent;
+	border: 1px solid #FFF;
+}
+/* 화면 공유 방송할 게임 */
+.card-2Mz_4z .selectedIcon-DE5J2w, .card-2Mz_4z .channelIcon-2xPHJh {
+	animation: Shadow2 1.8s infinite;
+	color: #FFF;
+}
+/* 화면 공유 방송할 채널 */
+.card-2Mz_4z .ellipsisText-2EszCb, .card-2Mz_4z .channelName-3_Vb6f {
+	animation: Text-Shadow2 1.8s infinite;
+}
+/* 화면 공유 경고문 */
+.warning--qC9N8 {
+	color: rgb(249, 78, 94);
+}
+/* 방송할 게임 변경버튼 */
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6 {
+	background-color: transparent;
+}
+/* 방송할 게임 변경버튼 마우스 반응 */
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:hover {
+	background-color: rgba(158, 31, 43, .8)
+}
+/* 해상도, 프레임 테두리 */
+.theme-dark .item-3T2z1R {
+	border-color: #FFF;
+}
+/* 테두리 곡선 */
+.item-3T2z1R:first-child {
+	border-radius: 7px 0 0 7px;
+}
+/* 테두리 곡선 */
+.item-3T2z1R:last-child {
+	border-radius: 0 7px 7px 0;
+}
+/* 해상도, 프레임 버튼 비선택 배경 */
+.selectorButton-EEUWed {
+	background: transparent;
+}
+/* 해상도, 프레임 버튼 선택 배경 */
+.selectorButtonSelected-t5V9On {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 해상도, 프레임 버튼 마우스 반응 */
+.selectorButton-EEUWed:not(.selectorButtonPremiumRequired-mKMbIu):hover {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 해상도, 프레임 선택 버튼 텍스트 */
+.selectorButtonSelected-t5V9On .selectorTextSelected-1ymya_ {
+	animation: Text-Shadow2 1.8s infinite;
+}
+/* 채팅기록 채팅창 관통 수정 */
+.scroller-2LSbBU {
+	height: 99%;
+}
+/* 읽지 않은 메세지 */
+.newMessagesBar-265mhP {
+	background-color: rgba(116, 218, 114, .8);
+	border-radius: 8px;
+}
+/* 읽음으로 표시하기 텍스트 */
+.newMessagesBar-265mhP .barButtonAlt-mYL1lj {
+	animation: Text-Shadow2 1.8s infinite;
+}
+/* 읽음으로 표시하기 버튼 */
+.newMessagesBar-265mhP .barButtonIcon-3t4V3d {
+	animation: Shadow2 1.8s infinite;
+}
+/* 오랜된 메세지 */
+.jumpToPresentBar-G1R9s6 {
+	background-color: rgba(158, 31, 43, .85);
+	padding-bottom: 0;
+	margin-bottom: 12px;
+	border-radius: 8px;
+}
+.jumpToPresentBar-G1R9s6:active {
+	margin-bottom: 12px;
+}
+/* 최근으로 이동하기 텍스트 */
+.jumpToPresentBar-G1R9s6 .barButtonAlt-mYL1lj {
+	animation: Text-Shadow2 1.8s infinite;
+}
+/* 최근으로 이동하기 버튼 */
+.jumpToPresentBar-G1R9s6 .barButtonIcon-3t4V3d {
+	animation: Shadow2 1.8s infinite;
+}
+/* 코드 배경 */
+.markup-2BOw-j code {
+	background: rgba(25, 25, 25, .45);
+	border: 1px solid #000;
+	color: rgb(25, 25, 25);
+}
+/* embed */
+.embedFull-2tM8-- {
+	background: rgba(25, 25, 25, .45);
+	border-left: 4px solid rgba(25, 25, 25, .7);
+}
+/* 채팅창 이모티콘 배경 */
+.chatContent-a9vAAp .contentWrapper-SvZHNd {
+	background-color: rgba(0, 0, 0, .3);
+}
+/* 채팅창 이모티콘 배경 */
+.theme-dark .chatContent-a9vAAp .wrapper-1-Fsb8, .chatContent-a9vAAp .wrapper-2Gsate, .chatContent-a9vAAp .inspector-S2gM3e {
+	background-color: transparent;
+}
+/* 채팅창 이모티콘 테두리 */
+.chatContent-a9vAAp .drawerSizingWrapper-17Mss4 {
+	border: 1px solid #FFF;
+	border-radius: 8px;
+}
+/* 채팅창 이모티콘, GIF 검색 */
+.chatContent-a9vAAp .container-2XeR5Z {
+	background-color: rgba(0, 0, 0, .3);
+	border: 1px solid #FFF;
+	border-radius: 8px;
+}
+/* 유니코드 이모티콘 바로가기 */
+.unicodeShortcut-15J8Ck {
+	background: linear-gradient(0deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, .15) 70%, rgba(0, 0, 0, 0) 100%)
+}
+/* 채팅창 스크롤바 */
+.scroller-2LSbBU::-webkit-scrollbar {
+	width: 10px;
+}
+/* 채팅창 스크롤바 */
+.scroller-2LSbBU::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, .3);
+	background-clip: padding-box;
+	border: 2px solid transparent;
+}
+/* 채팅창 스크롤바 */
+.scroller-2LSbBU::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, .6);
+	background-clip: padding-box;
+	border: 0 solid transparent;
+}
+/* 채팅창 스크롤바 */
+.scroller-2LSbBU::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, .5);
+}
+/* 고정된 메시지 배경 */
+.messagesPopoutWrap-1MQ1bW {
+	background-color: rgba(10, 10, 10, .3);
+	border-radius: 10px;
+	border: 1px solid #000;
+	max-height: 968px !important;
+}
+/* 고정된 메시지 배경 */
+.header-ykumBX, .footer-1kmXd4 {
+	background-color: transparent;
+}
+/* 고정된 메시지 헤더 */
+.header-ykumBX {
+	border-bottom: 1px solid #000;
+}
+/* 고정된 메시지 */
+.messageGroupWrapper-o-Zw7G {
+	background: transparent;
+	border: 1px solid #000;
+	border-radius: 8px;
+}
+/* 고정된 메시지 이동하기 버튼 */
+.jumpButton-3DTcS_ {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 고정된 메시지 타임스탬프 */
+.messageGroupWrapper-o-Zw7G .cozy-3raOZG .timestamp-3ZCmNB {
+	display: none;
+}
+/* 고정된 메시지 다운로드 파일 */
+.attachment-33OFj0 {
+	background-color: transparent;
+	border-color: #FFF;
+}
+/* 고정된 메시지 스크롤바 */
+.messagesPopout-24nkyi::-webkit-scrollbar{
+	display: none;
+}
+/* 고정된 메시지 오른쪽 */
+.messagesPopout-24nkyi {
+	padding-right: 8px !important;
+}
+/* 최근 멘션 */
+.channelHeader-3Gd2xq, .messageContainer-gbhlwo {
+	background-color: rgba(25, 25, 25, .4);
+	border: 1px solid #000;
+}
+/* 최근 멘션 필터 버튼 */
+.secondary-dIudih {
+	background-color: rgba(116, 218, 114, .55);
+	color: #FFF;
+}
+/* 최근 멘션 필터 버튼 마우스 반응 */
+.secondary-dIudih:hover {
+	background-color: rgb(116, 218, 114);
+}
+/* 최근 멘션 윗쪽 */
+.recentMentionsPopout-3rCiI6 .messagesPopout-24nkyi {
+	padding-top: 12px;
+}
+/* 최근 멘션 헤더 */
+.channelHeader-3Gd2xq {
+	border-radius: 12px 12px 0 0;
+	padding-right: 16px;
+}
+/* 최근 멘션 메시지 모서리 */
+.messageContainer-gbhlwo {
+	border-radius: 0 0 12px 12px;
+}
+/* 최근 멘션 닫기 버튼 */
+.closeButton-1152MI {
+	background-color: rgba(158, 31, 43, .55);
+	color: #FFF;
+}
+/* 최근 멘션 닫기 버튼 마우스 반응 */
+.closeButton-1152MI:hover {
+	background-color: rgb(158, 31, 43);
+}
+/* 최근 멘션 이동하기 버튼 */
+.jumpButton-2F6EMx {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 멘션, 읽지 않음 버튼 */
+.theme-dark .header-2-Imhb .tabBar-1kuXvJ .tab-ck0077.active-1MbGPa {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 멘션, 읽지 않음 버튼 마우스 반응 */
+.topPill-30KHOu .themed-OHr7kt.item-PXvHYJ:hover {
+	background-color: rgba(116, 218, 114, .35);
+}
+/* 읽지 않음 배경 */
+.container-enaOkj {
+	background-color: transparent;
+	border: 1px solid #000;
+	border-radius: 8px;
+}
+/* 읽지 않음 튜토리얼 */
+.tutorial-3w5I9h {
+	background-color: rgba(25, 25, 25, .5);
+	border: 1px solid #000;
+	border-radius: 12px;
+}
+/* 읽지 않음 메시지 */
+.messages-3G3erD {
+	background-color: rgba(25, 25, 25, .4);
+	border: 1px solid #000;
+	border-radius: 0 0 12px 12px;
+}
+/* 읽지 않음 메시지 이동하기 버튼 */
+.jumpButton-2dvRSC {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 읽지 않음 접기 버튼 */
+.collapseButton-2ZsEjz {
+	left: 77%;
+}
+/* 알림 설정, 읽음으로 표시하기 버튼 */
+.tertiary-aMXF0g {
+	background-color: rgba(116, 218, 114, .35);
+	color: #FFF;
+}
+/* 알림 설정, 읽음으로 표시하기 버튼 마우스 반응 */
+.tertiary-aMXF0g:hover {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 검색하기 */
+.searchBar-3dMhjb {
+	background-color: transparent;
+	color: #000;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+/* 검색하기 가운데 정렬 */
+.search-2oPWTC .DraftEditor-root, .iconContainer-O4O2CN {
+	bottom: 1px;
+}
+/* 검색하기 배경 */
+.container-3ayLPN.elevationBorderHigh-2WYJ09 {
+	background-color: rgba(0, 0, 0, .3);
+	border: 1px solid #000;
+	border-radius: 8px;
+}
+/* 검색하기 버튼 */
+.theme-dark .option-96V44q:after {
+	display: none;
+}
+/* 검색하기 텍스트 */
+.theme-dark .searchOption-zQ-1l6 .answer-1n6g43, .theme-dark .searchOption-zQ-1l6 .filter-3Y_im-, .theme-dark .option-96V44q .answer-1n6g43, .theme-dark .option-96V44q .filter-3Y_im-, .theme-dark .option-96V44q .nonText-3CRkO0 {
+	color: #FFF;
+}
+/* 검색하기 버튼 활성화 */
+.theme-dark .option-96V44q.selected-rZcOL-, .theme-dark .focused-2bY0OD {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 검색하기 엔터 아래 */
+.theme-dark .queryContainer-RKFJW- {
+	border-bottom-color: #FFF;
+}
+/* 캘린더 배경 */
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker {
+	background-color: rgba(0, 0, 0, .5);
+}
+/* 캘린더 깨짐 수정 */
+.calendarPicker-2yf6Ci .react-datepicker {
+	padding: 18px 18px 18px 19px;
+}
+/* 캘린더 헤더 배경 */
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker__header {
+	background-color: transparent;
+}
+/* 캘린더 오늘 표시 */
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker__day.react-datepicker__day--selected:after {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 캘린더 날짜 마우스 반응 */
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker__day:hover {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 캘린더 일요일, 토요일 빨간색 */
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sun, .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sat {
+	background-color: rgba(158, 31, 43, .8);
+}
+/* 캘린더 미래 일요일, 토요일 빨간색 */
+.theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sun.react-datepicker__day--disabled, .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sat.react-datepicker__day--disabled, .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sun.react-datepicker__day--disabled:hover, .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sat.react-datepicker__day--disabled:hover, .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sun:hover, .theme-dark .calendarPicker-2yf6Ci .react-datepicker__day--sat:hover {
+	background-color: rgba(158, 31, 43, .3);
+}
+/* 검색 결과 배경 */
+.searchResultsWrap-3-pOjs {
+	background-color: rgba(0, 0, 0, .3);
+	border: 1px solid #FFF;
+}
+/* 검색 결과 _ 채널 이름 선 제거 */
+.channelSeparator-1DOiGt:before {
+	display: none;
+}
+/* 검색 결과 _ 채널 배경 */
+.channelName-1JRO3C {
+	background: transparent;
+}
+/* 검색 결과 _ 주위 채팅 그라데이션 */
+.searchResult-9tQ1uo:before, .searchResult-9tQ1uo:after {
+	display: none;
+}
+/* 검색 결과 _ 해당 채팅 */
+.searchResultMessage-1fxgXh.hit-1fVM9e {
+	box-shadow: none;
+	background-color: transparent;
+	border: 1px solid #000;
+	border-radius: 8px;
+}
+/* 검색 결과 _ 확장 채팅 */
+.searchResult-9tQ1uo.expanded-w_LCGl {
+	background-color: transparent;
+	border: 1px solid #000;
+}
+/* 검색 결과 _ 확장 해당채팅 */
+.expanded-w_LCGl .searchResultMessage-1fxgXh.hit-1fVM9e {
+	background-color: rgba(116, 218, 114, .3);
+	border-color: #000;
+}
+/* 검색 결과 _ 해당 채팅 프로필 아이콘 */
+.searchResultMessage-1fxgXh.hit-1fVM9e .avatar-1BDn8e {
+	top: 12px;
+}
+/* 검색 결과 _ 해당 채팅 이동하기 버튼 */
+.jumpButton-JkYoYK {
+	background-color: rgba(116, 218, 114, .8);
+}
+/* 멤버 스크롤바 */
+.members-1998pB::-webkit-scrollbar {
+	display: none;
+}
+/* 서버 주인 아이콘 */
+.ownerIcon-2NH9FM {
+	animation: Shadow 1.8s infinite;
+	top: -1px;
+}
+/* 유저 프로필 팝아웃 */
+.userPopout-3XzG_A {
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+/* 유저 프로필 팝아웃 상단 */
+.theme-dark .headerNormal-T_seeN {
+	background-color: rgba(25, 25, 25, .5);
+	border-bottom: 1px solid #000;
+}
+/* 유저 프로필 팝아웃 하단 */
+.theme-dark .body-3iLsc4, .theme-dark .footer-1fjuF6 {
+	background-color: rgba(25, 25, 25, .5);
+}
+/* 유저 프로필 팝아웃 메시지 보내기 */
+.input-cIJ7To {
+	border-color: rgba(255, 255, 255, .6);
+}
+/* 유저 프로필 팝아웃 메시지 보내기 */
+.input-cIJ7To:hover ,.input-cIJ7To:focus {
+	border-color: #FFF;
+}
+/* 팝아웃 스포티파이 재생중 상단 */
+.headerSpotify-zpWxgT {
+	background: rgba(29, 185, 84, .55);
+	box-shadow: 0 2px 5px 2px rgb(29, 185, 84);
+}
+/* 팝아웃 플레이중 상단 */
+.headerPlaying-j0WQBV {
+	background: rgba(110, 160, 210, .5);
+	box-shadow: 0 2px 4px 1px rgb(110, 160, 210);
+}
+/* 팝아웃 스트리밍중 상단 */
+.headerStreaming-2FjmGz {
+	background: rgba(89, 54, 149, .55);
+	box-shadow: 0 2px 8px 2px rgb(89, 54, 149);
+}
+/* 팝아웃, 팝업 프로필 중단 투명 */
+.activity-11LB_k, .headerFill-adLl4x {
+	background-color: transparent;
+}
+/* 팝업 프로필 테두리 */
+.root-SR8cQa {
+	border: 2px solid #FFF;
+	border-radius: 16px;
+}
+/* 팝업 프로필 상단 */
+.topSectionNormal-2-vo2m {
+	background-color: rgba(25, 25, 25, .3);
+}
+/* 팝업 프로필 하단 */
+.body-3ND3kc {
+	background-color: rgba(25, 25, 25, .3);
+}
+/* 팝업 프로필 하단 스크롤바 */
+.listScroller-2_vlfo::-webkit-scrollbar, .infoScroller-3EYYns::-webkit-scrollbar {
+	display: none;
+}
+/* 팝업 프로필 플레이중 상단 */
+.topSectionPlaying-1J5E4n {
+	background: rgba(110, 160, 210, .4);
+	box-shadow: 0 0 8px 2px rgb(110, 160, 210);
+}
+/* 팝업 프로필 스트리밍중 상단 */
+.topSectionStreaming-1Tpf5X {
+	background: rgba(89, 54, 149, .45);
+	box-shadow: 0 0 8px 2px rgb(89, 54, 149);
+}
+/* 팝업 프로필 스포티파이 재생중 상단 */
+.topSectionSpotify-1lI0-P {
+	background: rgba(29, 185, 84, .55);
+	box-shadow: 0 0 8px 2px rgb(29, 185, 84);
+}
+/* 초대보내기 */
+.small-3iVZYw {
+	background-color: rgba(0, 0, 0, .4);
+	border: 1px solid #FFF;
+	max-height: 880px;
+}
+/* 초대보내기 이모티콘 버그 수정 */
+.content-1LAB8Z .positionContainer-DEuh7X {
+	position: inherit;
+	padding-top: 12px;
+	padding-left: 1px;
+	height: 350px;
+}
+/* 초대보내기 이모티콘 버그 수정 */
+.small-3iVZYw .scrollableContainer-2NUZem {
+	position: initial;
+}
+/* 이모티콘 테두리 */
+.content-1LAB8Z .drawerSizingWrapper-17Mss4 {
+	border: 1px solid #FFF;
+	border-radius: 12px;
+}
+/* 이모티콘 배경 */
+.content-1LAB8Z .contentWrapper-SvZHNd, .content-1LAB8Z .wrapper-2Gsate, .theme-dark .content-1LAB8Z .wrapper-1-Fsb8, .content-1LAB8Z .inspector-S2gM3e {
+	background-color: rgba(0, 0, 0, .3);
+}
+/* 이모티콘, GIF 검색 */
+.content-1LAB8Z .container-2XeR5Z, .content-1LAB8Z .container-cMG81i {
+	background-color: rgba(0, 0, 0, .3);
+	border: 1px solid #FFF;
+	border-radius: 8px;
+}
+/* 파일업로드 상단 배경 */
+.theme-dark .uploadModal-2ifh8j {
+	background-color: rgba(0, 0, 0, .4);
+	border: 1px solid #FFF;
+}
+/* 파일업로드 하단 배경 */
+.theme-dark .footer-3mqk7D {
+	background-color: rgba(0, 0, 0, .4);
+	box-shadow: none;
+	border-top: 1px solid #FFF;
+}
+/* 파일업로드 이모티콘 배경 */
+.theme-dark .uploadModal-2ifh8j .contentWrapper-SvZHNd, .theme-dark .uploadModal-2ifh8j .wrapper-2Gsate, .theme-dark .uploadModal-2ifh8j .wrapper-1-Fsb8, .theme-dark .uploadModal-2ifh8j .inspector-S2gM3e {
+	background-color: rgba(0, 0, 0, .3);
+}
+/* 파일업로드 이모티콘 테두리 */
+.theme-dark .uploadModal-2ifh8j .drawerSizingWrapper-17Mss4 {
+	border: 1px solid #FFF;
+	border-radius: 12px;
+}
+/* 파일업로드 이모티콘, GIF 검색 */
+.theme-dark .uploadModal-2ifh8j .container-2XeR5Z, .theme-dark .uploadModal-2ifh8j .container-cMG81i {
+	background-color: rgba(0, 0, 0, .3);
+	border: 1px solid #FFF;
+	border-radius: 8px;
+}
+/* 디스코드 홈 검색 */
+.searchBar-6Kv8R2 .searchBarComponent-32dTOx {
+	background-color: transparent;
+	border: 1px solid #000;
+	border-radius: 8px;
+}
+/* 디스코드 홈 _ 현재 활동중 */
+.wrapper-3D2qGf {
+	background-color: rgba(0, 0, 0, .3);
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+/* 디스코드 홈 _ 현재 활동중 _ 플레이중인 게임 및 채널 */
+.theme-dark .inset-3sAvek {
+	background-color: rgba(0, 0, 0, .5);
+	box-shadow: 0 0 4px 2px rgba(255, 255, 255, .45);
+}
+/* 디스코드 홈 _ 현재 활동중 마우스 반응 */
+.theme-dark .outer-1AjyKL.interactive-3B9GmY:hover {
+	background-color: rgba(0, 0, 0, .8);
+}
+/* 디스코드 홈 _ 현재 활동중 스크롤바 */
+.nowPlayingScroller-2XrVUt::-webkit-scrollbar {
+	width: 5px;
+}
+/* 디스코드 홈 _ 현재 활동중 스크롤바 */
+.nowPlayingScroller-2XrVUt::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, .8);
+	border-radius: 0;
+}
+/* 서버 초대 */
+.wrapper-35wsBm {
+	background-color: rgba(0, 0, 0, .3);
+	border: 1px solid #FFF;
+	border-radius: 12px;
+}
+.header-2o-2hj {
+	color: #000;
+}
+.menu-3sdvDG {
+	background: rgba(25, 25, 25, .8);
+}
+.colorDefault-2K3EoJ {
+	color: rgba(255, 255, 255, .8);
+}
+.separator-2I32lJ {
+	border-bottom: 1px solid #FFF;
+}
+
+
+
+/* https://betterdiscordlibrary.com/themes/Adjustable%20Server%20Width */
+.base-3dtUhz {
+  left: var(--container);
+}
+.wrapper-1Rf91z {
+  width: var(--container);
+}
+.wrapper-1Rf91z .scrollerWrap-1IAIlv {
+  width: calc(100% + 30px);
+}
+.wrapper-1Rf91z .placeholderMask-3K9THS {
+  width: var(--icon);
+  height: var(--icon);
+}
+.wrapper-1Rf91z .listItem-2P_4kh {
+  width: var(--container);
+  margin-bottom: var(--server-icon-spacing);
+}
+.wrapper-1Rf91z .scroller-2TZvBN > div[style]:not(.listItem-2P_4kh) {
+  height: calc(var(--icon) + var(--server-icon-spacing)) !important;
+}
+.wrapper-1Rf91z [class*=pill] {
+  height: var(--icon);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wrapper-1Rf91z [class*=pill] span {
+  height: var(--server-icon-size) !important;
+  transition: 0.1s ease !important;
+  transform: scale(1, 0) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 0"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 1"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 2"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 3"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 4"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 5"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 6"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 7"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 8"] {
+  transform: scale(1, 0.25) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 9"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 10"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 11"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 12"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 13"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 14"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 15"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 16"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 17"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 18"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 19"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 20"] {
+  transform: scale(1, 0.5) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 21"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 22"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 23"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 24"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 25"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 26"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 27"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 28"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 29"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 30"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 31"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 32"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 33"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 34"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 35"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 36"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 37"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 38"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 39"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z [class*=pill] span[style*="height: 40"] {
+  transform: scale(1, 1) !important;
+}
+.wrapper-1Rf91z .guildsError-b7zR5H,
+.wrapper-1Rf91z .svg-1X37T1,
+.wrapper-1Rf91z .wrapper-25eVIn {
+  width: var(--icon);
+  height: var(--icon);
+}
+.wrapper-1Rf91z .iconBadge-2NuvG9 {
+  border-radius: 50%;
+  height: calc(var(--icon) / 3);
+  width: calc(var(--icon) / 3);
+}
+.wrapper-1Rf91z .wrapper-21YSNc {
+  width: var(--container);
+}
+.wrapper-1Rf91z .wrapper-21YSNc .folder-21wGz3,
+.wrapper-1Rf91z .wrapper-21YSNc .folderIconWrapper-226oVY {
+  background: transparent;
+}
+.wrapper-1Rf91z .wrapper-21YSNc .expandedFolderBackground-2sPsd- {
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--server-icon-size);
+}
+.wrapper-1Rf91z .wrapper-21YSNc .expandedGuilds-1JMD4M {
+  height: auto !important;
+}
+.wrapper-1Rf91z .wrapper-21YSNc .closedFolderIconWrapper-15K9MK,
+.wrapper-1Rf91z .wrapper-21YSNc .expandedFolderIconWrapper-1xLaU- {
+  transform: none !important;
+}
+/* https://betterdiscordlibrary.com/themes/Adjustable%20Server%20Width */
+
+/* ClearVision_v6 음성 셋팅 */
+.voiceUser-14U_Ns {
+	z-index:1;
+}
+.voiceUser-14U_Ns .content-3xS9Lh {
+	border-radius:3px;
+	transition:all .15s ease-in-out;
+}
+.voiceUser-14U_Ns .avatarContainer-2inGBK {
+	position:relative;
+	transition:all .1s ease-in-out;
+}
+.voiceUser-14U_Ns .avatarContainer-2inGBK:after {
+	content:"";
+	position:absolute;
+	width:0;
+	top:0;
+	bottom:0;
+	left:50%;
+	background:linear-gradient(to right, rgb(25, 25, 25) 10%, transparent);
+	opacity:.65;
+	transition:all .1s ease-in-out,  width .15s ease-in-out;
+	pointer-events:none;
+	z-index:-1;
+}
+.avatarSpeaking-3MqCHL	{
+	box-shadow:0 0 0 2px rgb(25, 25, 25),inset 0 0 3px rgba(0,0,0,0.5);
+}
+.voiceUser-14U_Ns .avatarSpeaking-3MqCHL:after {
+	top:-2px;
+	bottom:-2px;
+	width:100px;
+}
+.voiceUser-14U_Ns .username-lm8y6T {
+	color:rgba(25,25,25,.8);
+	transition:all .1s ease-in-out
+}
+.voiceUser-14U_Ns .usernameSpeaking-2xbKKh {
+	color:#fff !important
+}
+.border-3dQmSY.speaking-WDn8Wm {
+	box-shadow:inset 0 0 0 2px rgba(255, 255, 255, .5)
+}/* ClearVision_v6 음성 셋팅 */
+
+@-webkit-keyframes Unread {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(25, 25, 25, 1);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 8px rgba(25, 25, 25, 0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(25, 25, 25, 0);
+	}
+}
+@-webkit-keyframes Unread2 {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 8px rgba(25, 25, 25, 0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(25, 25, 25, 0);
+	}
+}
+@keyframes Color {
+	0% {
+		color: rgba(25, 25, 25, 1);
+	}
+	35% {
+		color: rgba(255, 255, 255, .8);
+	}
+	100% {
+		color: rgba(25, 25, 25, 1);
+	}
+}
+@keyframes Border_Color {
+	0% {
+		border-color: rgba(25, 25, 25, .8);
+	}
+	35% {
+		border-color: rgba(25, 25, 25, 0);
+	}
+	100% {
+		border-color: rgba(25, 25, 25, .8);
+	}
+}
+@keyframes Text-Shadow {
+	0% {
+		text-shadow: 0 0 0 rgba(25, 25, 25, 0);
+	}
+	40% {
+		text-shadow: 0 0 4px rgba(25, 25, 25, .8), 0 0 5px rgba(25, 25, 25, .8), 0 0 6px rgba(25, 25, 25, .8);
+	}
+	100% {
+		text-shadow: 0 0 0 rgba(25, 25, 25, 0);
+	}
+}
+@keyframes Shadow {
+	0% {
+		filter: drop-shadow(0 0 0 rgba(25, 25, 25, .8));
+	}
+	40% {
+		filter: drop-shadow(0 0 3px rgba(25, 25, 25, .8));
+	}
+	100% {
+		filter: drop-shadow(0 0 0 rgba(25, 25, 25, .8));
+	}
+}
+@keyframes Text-Shadow2 {
+	0% {
+		text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+	}
+	40% {
+		text-shadow: 0 0 4px rgba(255, 255, 255, .8), 0 0 5px rgba(255, 255, 255, .8), 0 0 6px rgba(255, 255, 255, .8);
+	}
+	100% {
+		text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+@keyframes Shadow2 {
+	0% {
+		filter: drop-shadow(0 0 0 rgba(255, 255, 255, .8));
+	}
+	40% {
+		filter: drop-shadow(0 0 3px rgba(255, 255, 255, .8));
+	}
+	100% {
+		filter: drop-shadow(0 0 0 rgba(255, 255, 255, .8));
+	}
+}
