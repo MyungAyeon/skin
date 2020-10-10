@@ -20,13 +20,43 @@
 }
 /* https://betterdiscordlibrary.com/themes/Adjustable%20Server%20Width - 서버아이콘 크기 조절 */
 
+/* 플러그인 업데이트 알림 */
+#pluginNotice {
+	position: absolute;
+	top: -26px;
+	left: -85px;
+	z-index: 999;
+	background-color: transparent;
+	box-shadow: none;
+}
+#pluginNotice, .notice-message {
+	visibility: hidden;
+}
+#pluginNotice, .notice-message:after {
+	content: "플러그인 업데이트가 필요한 목록 -";
+	visibility: visible;
+	font-size: 13px;
+	color: #8C4F4E;
+}
+#pluginNotice #outdatedPlugins>span {
+	color: #8C4F4E;
+}
+#pluginNotice .closeButton-3cJIM4 {
+	background: transparent;
+}
+#pluginNotice .closeButton-3cJIM4:after {
+	content: "x";
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 20px;
+	color: #8C4F4E;
+}
 
 /* 투명 */
-.appMount-3lHmkl, .app-2rEoOp, .wrapper-1Rf91z, .scroller-2TZvBN, .container-PNkimc, .panels-j1Uci_, .members-1998pB, .members-1998pB>div, .privateChannels-1nO12o, .scroller-1JbKMe, .theme-dark .container-1D34oG, .layer-3QrUeG, .standardSidebarView-3F1I7i, .contentRegionScroller-26nc1e, .channelTextArea-rNsIhG, .scrollableContainer-2NUZem, .root-SR8cQa, .scroller-1IIF0A, .header-39GIC8, .applicationStore-1pNvnv, .scroller-9moviB, .scroller-2XE8rp, .theme-dark .pageWrapper-1PgVDX, .scroller-305q3I {
+.appMount-3lHmkl, .app-2rEoOp, .scroller-2TZvBN, .container-PNkimc, .panels-j1Uci_, .privateChannels-1nO12o, .scroller-1JbKMe, .theme-dark .container-1D34oG, .layer-3QrUeG, .standardSidebarView-3F1I7i, .contentRegionScroller-26nc1e, .channelTextArea-rNsIhG, .scrollableContainer-2NUZem, .root-SR8cQa, .scroller-1IIF0A, .header-39GIC8, .applicationStore-1pNvnv, .scroller-9moviB, .scroller-2XE8rp, .theme-dark .pageWrapper-1PgVDX, .scroller-305q3I {
 	background-color: transparent;
 }
 /* 투명 */
-.sidebar-2K8pFh, .chat-3bRxxu, .container-1r6BKw.themed-ANHk51, .nowPlayingColumn-2sl4cE, .sidebarRegionScroller-3MXcoP, .contentRegion-3nDuYy {
+.members-1998pB>div, .chat-3bRxxu, .container-1r6BKw.themed-ANHk51, .nowPlayingColumn-2sl4cE, .sidebarRegionScroller-3MXcoP, .contentRegion-3nDuYy {
 	background: transparent;
 }
 
@@ -45,7 +75,7 @@
 
 /* 채팅 폰트 색상 */
 .markup-2BOw-j {
-	color: var(--chat-text);
+	color: #8C4F4E;
 }
 
 /* 스트리머 모드 */
@@ -57,10 +87,10 @@ div[class^="typeWindows-"] div[class^="wordmark"] svg {
 	display: none;
 }
 div[class^="typeWindows-"] {
-	height: 28px;
+	height: 25px;
 	margin-top: 0;
 	padding-bottom: 1px;
-	z-index: 999;
+	z-index: 1;
 }
 div[class^="typeWindows-"] div[class^="wordmark"]::after {
 	content: "DISCORD";
@@ -125,7 +155,7 @@ div[class^="listItemWrapper-"] div[class^="childWrapper-"]:after {
 	transform: scale(.3);
 }
 .guildSeparator-3s64Iy {
-	background-color: rgba(0, 0, 0, .5);
+	display: none;
 }
 /* 서버 추가 아이콘 */
 .circleIconButton-jET_ig {
@@ -154,13 +184,13 @@ div[class^="listItemWrapper-"] div[class^="childWrapper-"]:after {
 }
 /* 안 읽은 채널 */
 .modeUnread-1zpFdA .name-3_Dsmg {
-	animation: Text-Shadow 1.8s infinite;
-	color: #000;
+	animation: Text-Shadow_c 1.8s infinite;
+	color: #DF6363;
 }
 /* 안 읽은 채널 아이콘 */
 .modeUnread-1zpFdA .icon-1_QxNX {
-	animation: Shadow 1.8s infinite;
-	color: #000;
+	animation: Shadow_c 1.8s infinite;
+	color: #DF6363;
 }
 /* 음성 인원수 */
 .wrapper-pZmgj4 {
@@ -215,6 +245,7 @@ div[class^="listItemWrapper-"] div[class^="childWrapper-"]:after {
 /* 알림 */
 div[class^="numberBadge-"], .unread-3zKkbm {
 	animation: Unread 1.8s infinite;
+	background-color: #DF6363;
 }
 /* 서버 아이콘 왼쪽 */
 .item-2hkk8m {
@@ -222,7 +253,7 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 }
 /* 서버 아이콘 왼쪽 알림 */
 .bd-unread .pill-31IEus {
-	border: 0px hidden rgba(25, 25, 25, .5);
+	border: 0px hidden rgba(223, 99, 99, .5);
 	border-radius: 8px;
 	animation: Unread2 2s infinite;
 	height: 25px;
@@ -256,11 +287,11 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 /* 채팅창 타임스탬프 */
 .content-1o0f9g {
 	color: rgba(255, 255, 255, .85);
-	background: rgba(25, 25, 25, .6);
+	background: rgba(215, 109, 113, .7);
 }
 /* 채팅창 타임스탬프 선 */
 .divider-JfaTT5 {
-	border-top: 1px solid rgba(25, 25, 25, .6)
+	border-top: 1px solid rgba(215, 109, 113, .6)
 }
 /* 채팅 입력칸 */
 .scrollableContainer-2NUZem {
@@ -298,12 +329,13 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 }
 /* 화면 공유 방송할 게임 */
 .card-2Mz_4z .selectedIcon-DE5J2w, .card-2Mz_4z .channelIcon-2xPHJh {
-	animation: Shadow2 1.8s infinite;
+	animation: Shadow_w 1.8s infinite;
 	color: #FFF;
 }
 /* 화면 공유 방송할 채널 */
 .card-2Mz_4z .ellipsisText-2EszCb, .card-2Mz_4z .channelName-3_Vb6f {
-	animation: Text-Shadow2 1.8s infinite;
+	animation: Text-Shadow_w 1.8s infinite;
+	color: #FFF;
 }
 /* 화면 공유 경고문 */
 .warning--qC9N8 {
@@ -329,6 +361,10 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 .item-3T2z1R:last-child {
 	border-radius: 0 7px 7px 0;
 }
+/* 해상도, 프레임 폰트 색상 */
+.selectorText-2I7fQU {
+	color: #FFF;
+}
 /* 해상도, 프레임 버튼 비선택 배경 */
 .selectorButton-EEUWed {
 	background: transparent;
@@ -343,7 +379,7 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 }
 /* 해상도, 프레임 선택 버튼 텍스트 */
 .selectorButtonSelected-t5V9On .selectorTextSelected-1ymya_ {
-	animation: Text-Shadow2 1.8s infinite;
+	animation: Text-Shadow_w 1.8s infinite;
 }
 /* 채팅기록 채팅창 관통 수정 */
 .scroller-2LSbBU {
@@ -356,11 +392,11 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 }
 /* 읽음으로 표시하기 텍스트 */
 .newMessagesBar-265mhP .barButtonAlt-mYL1lj {
-	animation: Text-Shadow2 1.8s infinite;
+	animation: Text-Shadow_w 1.8s infinite;
 }
 /* 읽음으로 표시하기 버튼 */
 .newMessagesBar-265mhP .barButtonIcon-3t4V3d {
-	animation: Shadow2 1.8s infinite;
+	animation: Shadow_w 1.8s infinite;
 }
 /* 오랜된 메세지 */
 .jumpToPresentBar-G1R9s6 {
@@ -374,11 +410,11 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 }
 /* 최근으로 이동하기 텍스트 */
 .jumpToPresentBar-G1R9s6 .barButtonAlt-mYL1lj {
-	animation: Text-Shadow2 1.8s infinite;
+	animation: Text-Shadow_w 1.8s infinite;
 }
 /* 최근으로 이동하기 버튼 */
 .jumpToPresentBar-G1R9s6 .barButtonIcon-3t4V3d {
-	animation: Shadow2 1.8s infinite;
+	animation: Shadow_w 1.8s infinite;
 }
 /* 코드 배경 */
 .markup-2BOw-j code {
@@ -420,19 +456,19 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 }
 /* 채팅창 스크롤바 */
 .scroller-2LSbBU::-webkit-scrollbar-thumb {
-	background: rgba(255, 255, 255, .3);
+	background: rgba(223, 99, 99, .8);
 	background-clip: padding-box;
 	border: 2px solid transparent;
 }
 /* 채팅창 스크롤바 */
 .scroller-2LSbBU::-webkit-scrollbar-thumb:hover {
-	background: rgba(255, 255, 255, .6);
+	background: rgba(216, 102, 102, 1);
 	background-clip: padding-box;
 	border: 0 solid transparent;
 }
 /* 채팅창 스크롤바 */
 .scroller-2LSbBU::-webkit-scrollbar-track {
-	background: rgba(0, 0, 0, .5);
+	background: rgba(216, 102, 102, .45);
 }
 /* 고정된 메시지 배경 */
 .messagesPopoutWrap-1MQ1bW {
@@ -838,9 +874,6 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 	border: 1px solid #FFF;
 	border-radius: 12px;
 }
-.header-2o-2hj {
-	color: #000;
-}
 .menu-3sdvDG {
 	background: rgba(25, 25, 25, .8);
 }
@@ -850,6 +883,71 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 .separator-2I32lJ {
 	border-bottom: 1px solid #FFF;
 }
+/* 서버 이름 헤더 */
+.header-2o-2hj {
+	color: #DF6363;
+	box-shadow: none;
+	border-bottom: 1px solid rgba(223, 99, 99, .65);
+}
+/* 서버 목록 */
+.wrapper-1Rf91z {
+	margin-left: 10px;
+	margin-top: 6px;
+	background-color: rgba(255, 255, 255, .5);
+	border-radius: 10px 0 0 10px;
+	border-right: 2px solid #DF6363;
+	height: 97.8%;
+}
+/* 채널 목록 */
+.sidebar-2K8pFh {
+	margin-left: 10px;
+	margin-top: 6px;
+	background-color: rgba(255, 255, 255, .5);
+	border-radius: 0 10px 10px 0 !important;
+	height: 97.8%;
+}
+/* 멤버 목록 */
+.members-1998pB {
+	background-color: rgba(255, 255, 255, .5);
+	margin-right: 10px;
+	margin-top: 6px;
+	margin-left: 10px;
+	border-radius: 10px;
+	height: 97.8% !important;
+}
+/* 선택된 채널 */
+.containerDefault-1ZnADq .modeSelected-1zApJ_ .icon-1_QxNX, .containerDefault-1ZnADq .modeSelected-1zApJ_ .name-3_Dsmg, .containerDefault-1ZnADq .actionIcon-2Hi9ZG {
+	color: rgb(223, 99, 99);
+}
+/* 채널 */
+.icon-1_QxNX, .name-3_Dsmg {
+	color: rgb(223, 99, 99);
+}
+/* 알림끈 채널 */
+.modeMuted-3osy7j .icon-1_QxNX, .modeMuted-3osy7j .name-3_Dsmg {
+	color: rgba(223, 99, 99, .5);
+}
+/* 닉네임 그림자 */
+.username-1A8OIy {
+	text-shadow: 1px 2px 2px #985151;
+	color: #8C4F4E;
+}
+/* 채팅입력 */
+.typing-2GQL18, .dots-3Bkt3k.themed-IQiCm3 {
+	color: #8C4F4E;
+}
+/* 채팅창 구분선 제거 */
+.content-yTz4x3:before {
+	display: none;
+}
+.icon-22AiRD, .base-1x0h_U, .topic-TCb_qw, .clickable-3rdHwn .icon-22AiRD {
+	color: #8C4F4E;
+}
+.divider-3FBTu8 {
+	background: #8C4F4E;
+}
+
+
 
 
 
@@ -1058,14 +1156,14 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 	top:0;
 	bottom:0;
 	left:50%;
-	background:linear-gradient(to right, rgb(25, 25, 25) 10%, transparent);
+	background:linear-gradient(to right, #DF6363 10%, transparent);
 	opacity:.65;
 	transition:all .1s ease-in-out,  width .15s ease-in-out;
 	pointer-events:none;
 	z-index:-1;
 }
 .avatarSpeaking-3MqCHL	{
-	box-shadow:0 0 0 2px rgb(25, 25, 25),inset 0 0 3px rgba(0,0,0,0.5);
+	box-shadow:0 0 0 2px #DF6363,inset 0 0 3px rgba(0,0,0,0.5);
 }
 .voiceUser-14U_Ns .avatarSpeaking-3MqCHL:after {
 	top:-2px;
@@ -1085,18 +1183,18 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 
 @-webkit-keyframes Unread {
 	0% {
-		-webkit-box-shadow: 0 0 0 0 rgba(25, 25, 25, 1);
+		-webkit-box-shadow: 0 0 0 0 rgba(223, 99, 99, .8);
 	}
 	70% {
 		-webkit-box-shadow: 0 0 0 8px rgba(25, 25, 25, 0);
 	}
 	100% {
-		-webkit-box-shadow: 0 0 0 0 rgba(25, 25, 25, 0);
+		-webkit-box-shadow: 0 0 0 0 rgba(223, 99, 99, 0);
 	}
 }
 @-webkit-keyframes Unread2 {
 	0% {
-		-webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+		-webkit-box-shadow: 0 0 0 0 rgba(223, 99, 99, 1);
 	}
 	70% {
 		-webkit-box-shadow: 0 0 0 8px rgba(25, 25, 25, 0);
@@ -1149,7 +1247,7 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 		filter: drop-shadow(0 0 0 rgba(25, 25, 25, .8));
 	}
 }
-@keyframes Text-Shadow2 {
+@keyframes Text-Shadow_w {
 	0% {
 		text-shadow: 0 0 0 rgba(255, 255, 255, 0);
 	}
@@ -1160,12 +1258,34 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 		text-shadow: 0 0 0 rgba(255, 255, 255, 0);
 	}
 }
-@keyframes Shadow2 {
+@keyframes Shadow_w {
 	0% {
 		filter: drop-shadow(0 0 0 rgba(255, 255, 255, .8));
 	}
 	40% {
 		filter: drop-shadow(0 0 3px rgba(255, 255, 255, .8));
+	}
+	100% {
+		filter: drop-shadow(0 0 0 rgba(255, 255, 255, .8));
+	}
+}
+@keyframes Text-Shadow_c {
+	0% {
+		text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+	}
+	40% {
+		text-shadow: 0 0 4px rgba(223, 99, 99, .5), 0 0 5px rgba(223, 99, 99, .4);
+	}
+	100% {
+		text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+@keyframes Shadow_c {
+	0% {
+		filter: drop-shadow(0 0 0 rgba(255, 255, 255, .8));
+	}
+	40% {
+		filter: drop-shadow(0 0 3px rgba(223, 99, 99, .5));
 	}
 	100% {
 		filter: drop-shadow(0 0 0 rgba(255, 255, 255, .8));
