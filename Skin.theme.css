@@ -397,18 +397,6 @@ div[class^="listItemWrapper-"] div[class^="childWrapper-"]:after {
 div[class^="numberBadge-"], .unread-3zKkbm {
 	animation: Unread 1.8s infinite;
 }
-/* 서버 아이콘 왼쪽 */
-.item-2hkk8m {
-	display: none;
-}
-/* 서버 아이콘 왼쪽 알림 */
-.bd-unread .pill-31IEus {
-	border: 0px hidden rgba(255, 255, 255, .5);
-	border-radius: 8px;
-	animation: Unread2 2s infinite;
-	height: 25px;
-	width: 0px;
-}
 .form-2fGMdU:before {
 	display: none;
 }
@@ -1070,17 +1058,6 @@ div[class^="numberBadge-"], .unread-3zKkbm {
 	}
 	70% {
 		-webkit-box-shadow: 0 0 0 8px rgba(255, 255, 255, 0);
-	}
-	100% {
-		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-	}
-}
-@-webkit-keyframes Unread2 {
-	0% {
-		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
-	}
-	70% {
-		-webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
 	}
 	100% {
 		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
